@@ -4,7 +4,8 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #121212;
+  background: url(picture/background.jpg) ;
+  backdrop-filter: blur(16px);
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -14,17 +15,21 @@ body {
   margin: 0;
 }
 
+
 .container {
-  min-width: 300px;
-  background-color: #1e1e1e;
-  padding: 30px 40px;
+  min-width: 400px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #1f2937;
+  backdrop-filter: blur(10px);
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+  padding: 80px;
   display: block;
 }
 .main-btn-box{
   display: flex;
   justify-content: center;
+  gap: 20px;
 }
 .container h1 {
   margin-bottom: 1rem;
@@ -32,20 +37,25 @@ body {
 }
 
 .container button {
-  width: 100px;
-  height: 100px;
-  margin: 0.5rem;
-  border-radius: 50%;
-  background-color: #0d6efd;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.45),rgba(255,255,255,.18) 40%,rgba(120,180,255,.22) 70%,rgba(120,180,255,.14));
+  border:1px solid rgba(255,255,255,.4);
+  backdrop-filter:blur(10px);
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.5),0 6px 18px rgba(0,0,0,.35);
+  color:#fff;
+  transition:transform .25s ease,box-shadow .25s ease,background .25s ease;
 }
 
 .container button:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
+  transform:translateY(-4px) scale(1.06);
+  background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.55),rgba(255,255,255,.22) 40%,rgba(140,195,255,.28) 70%,rgba(140,195,255,.18));
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.6),0 10px 28px rgba(0,0,0,.45);
 }
 
 form {
