@@ -4,7 +4,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: url(picture/background.jpg) ;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(picture/background.png) no-repeat center / cover;
   backdrop-filter: blur(16px);
   display: flex;
   flex-direction: column;
@@ -17,12 +17,15 @@ body {
 
 
 .container {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(60px) saturate(180%);
+  -webkit-backdrop-filter: blur(60px) saturate(180%);
+  border-radius: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   min-width: 400px;
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.35);
   color: #1f2937;
   backdrop-filter: blur(10px);
-  border-radius: 12px;
   padding: 80px;
   display: block;
 }
